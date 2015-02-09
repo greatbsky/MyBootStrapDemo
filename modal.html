@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>首页</title>
+    <meta charset="UTF-8"/>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <!-- 引入 Bootstrap -->
+    <link href="/css/libs3/bootstrap/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/css/libs3/bootstrap/bootstrap-theme.min.css" rel="stylesheet"/>
+
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+    <script src="/js/libs3/html5shiv/html5shiv-3.7.2.js"></script>
+    <script src="/js/libs3/respond.js/respond-1.4.2.min.js"></script>
+    <![endif]-->
+
+    <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+    <script src="/js/libs3/jquery/jquery-2.1.3.min.js"></script>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+
+<div class="container" style="padding-top: 100px;">
+
+
+    <h2>模态框（Modal）插件事件</h2>
+
+    <!-- 按钮触发模态框 -->
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        开始演示模态框
+    </button>
+
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"
+                            aria-hidden="true">×
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        模态框（Modal）标题
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    点击关闭按钮检查事件功能。
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default"
+                            data-dismiss="modal">
+                        关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交更改
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <script>
+        $(function () { $('#myModal').modal('hide')});
+    </script>
+    <script>
+        $(function () { $('#myModal').on('hide.bs.modal', function () {
+            alert('嘿，我听说您喜欢模态框...');})
+        });
+    </script>
+
+    <h2>模态框（Modal）插件方法</h2>
+
+    <!-- 按钮触发模态框 -->
+    <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        开始演示模态框
+    </button>
+
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModalaaa" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        模态框（Modal）标题
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    按下 ESC 按钮退出。
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default"
+                            data-dismiss="modal">关闭
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        提交更改
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <script>
+        $(function () { $('#myModalaaa').modal({
+            keyboard: true
+        })});
+    </script>
+
+    <div class="row">
+
+        <h2>创建模态框（Modal）</h2>
+        <!-- 按钮触发模态框 -->
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+            开始演示模态框
+        </button>
+
+        <!-- 模态框（Modal） -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close"
+                                data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            模态框（Modal）标题
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        在这里添加一些文本
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default"
+                                data-dismiss="modal">关闭
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            提交更改
+                        </button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal -->
+        </div>
+    </div>
+</div>
+    <!-- 包括所有已编译的插件 -->
+    <script src="/js/libs3/bootstrap/bootstrap-3.3.2.min.js"></script>
+</body>
+</html>
